@@ -1,0 +1,125 @@
+body 
+{
+	background:url("img5.jpg");
+	background-size: cover;
+	background-repeat: no-repeat,repeat; 
+	padding-top: 5px;
+	padding-bottom: 50px;
+	opacity: 0.9;
+	overflow: scroll;
+}
+
+#bg1
+{
+	width: 1120px;
+  height: 330px; 
+  background: url("img4.png");
+	background-size: cover;
+  background-position: 0px 0px;
+	background-repeat: no-repeat;
+	padding: 80px 150px;
+
+}
+#check
+{
+  padding-top: 0px;
+}
+
+
+h1 
+{
+    text-align: center;
+    font-family: 'PT Sans',Helvetica;
+    font-size: 375%;
+    padding: 32px;
+    text-shadow: 3px 3px 3px #ccc;
+}
+
+
+
+
+h2
+{
+	text-align: center;
+	font-size: 250%;
+	font-family: 'PT Sans',Helvetica;
+	text-shadow: 1px 1px 1px #000000;
+
+}
+
+p
+{
+	text-align: center;
+	font-family: 'PT Sans',Helvetica;
+	font-size: 150%;
+	text-shadow: .5px .5px .5px #000000;
+  padding-top: 120px;
+}
+
+
+#heading
+{
+  height: 140px;
+}
+
+.myFormStyle
+{
+  font: 95% Arial, Helvetica, sans-serif;
+    max-width: 400px;
+    margin: 10px auto;
+    padding: 16px;
+    background: #F7F7F7;
+
+}
+
+.myFormStyle input[type="text"],
+.myFormStyle input[type="Email"],
+.myFormStyle textarea,
+.myFormStyle select
+{
+  -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 100%;
+    background: #fff;
+    margin-bottom: 4%;
+    border: 1px solid #ccc;
+    padding: 3%;
+    color: #555;
+    font: 95% Arial, Helvetica, sans-serif;
+} 
+
+.myFormStyle input[type="text"]:focus,
+.myFormStyle input[type="Email"]:focus,
+.myFormStyle textarea:focus,
+.myFormStyle select:focus
+{
+    box-shadow: 0 0 5px #ff6f69;
+    padding: 3%;
+    border: 1px solid #ff6f69;
+}
+
+
+.myFormStyle input[type="submit"],
+.myFormStyle input[type="button"]{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 100%;
+    padding: 3%;
+    background: #ff7878;
+    border-bottom: 2px solid #ee4035;
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;    
+    color: #fff;
+}
+.myFormStyle input[type="submit"]:hover,
+.myFormStyle input[type="button"]:hover{
+    background: #ff8b94;
+}
