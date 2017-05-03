@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#ffcc80"
+    android:scrollY="@dimen/activity_vertical_margin"
+    tools:context="com.example.sukriti_lab6.Main2Activity">
+
+    <TextView
+
+        android:text="Admissions"
+        android:textSize="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv1"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp" />
+
+    <TextView
+        android:text="General Category: Based on the marks obtained in MU-OET, Manipal University will declare a list of all candidates appeared for the entrance test on or before 23.05.2017 in the website. In case of two or more candidates obtaining equal marks, the inter-se merit of such candidates will be determined on the basis of higher marks in   the order of preference as under:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="81dp"
+        android:textAlignment="center"
+        android:id="@+id/tv22" />
+
+    <TextView
+        android:text="Entrance Test Type: Manipal University Online Entrance Test (MU-OET).Test Syllabus: Physics, Chemistry, Mathematics and General English include questions based on the 10+2 syllabus followed by major 10+2 Boards /Universities. The detailed syllabi can be downloaded from our website www.admissions.manipal.edu.
+ "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:id="@+id/tv12"
+        android:layout_below="@+id/tv22"
+        android:layout_alignParentStart="true" />
+</RelativeLayout>
