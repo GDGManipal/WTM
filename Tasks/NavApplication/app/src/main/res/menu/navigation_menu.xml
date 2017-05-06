@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- navigation menu
+    may want to change the color of icons-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<group
+    android:checkableBehavior="single">
+    <item android:id="@+id/nav_aboutUs"
+        android:title = "About Us"
+        android:icon="@mipmap/ic_people_black_24dp"/>
+
+    <item android:id="@+id/nav_events"
+        android:icon="@mipmap/ic_event_black_24dp"
+        android:title = "Events"/>
+
+    <item android:id="@+id/nav_askAnExpert"
+        android:icon="@mipmap/ic_email_black_24dp"
+        android:title = "Ask An Expert"/>
+
+    <item android:id="@+id/nav_discuss"
+        android:icon="@mipmap/ic_chat_black_24dp"
+    android:title = "Discuss"/>
+</group>
+</menu>
