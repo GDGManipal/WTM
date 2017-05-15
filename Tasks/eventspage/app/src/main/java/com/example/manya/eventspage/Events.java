@@ -10,7 +10,7 @@ import java.util.Calendar;
 
 import android.view.View;
 import android.widget.*;
-public class Events extends AppCompatActivity {DateFormat formatdatetime=new SimpleDateFormat("dd MM yyyy, HH:mm");
+public class Events extends AppCompatActivity {DateFormat formatdatetime=new SimpleDateFormat("dd MM yyyy, HH:mm");//custom format
 Calendar datetime=Calendar.getInstance();
     private TextView text;
 private Button buttondate;
@@ -23,14 +23,14 @@ private Button buttondate;
         buttondate = (Button) findViewById(R.id.button);
         buttontime = (Button) findViewById(R.id.button2);
 
-        buttondate.setOnClickListener(new View.OnClickListener() {
+        buttondate.setOnClickListener(new View.OnClickListener() {//for date updation
 
 
             public void onClick(View v) {
                 updateDate();
             }
         });
-        buttontime.setOnClickListener(new View.OnClickListener() {
+        buttontime.setOnClickListener(new View.OnClickListener() {//for time updation
 
 
             public void onClick(View v) {
@@ -39,10 +39,10 @@ private Button buttondate;
         });
         updateTextLabel();
     }
-    private void updateDate(){
+    private void updateDate(){//to pick date
         new DatePickerDialog(this,d,datetime.get(Calendar.YEAR),datetime.get(Calendar.MONTH),datetime.get(Calendar.DAY_OF_MONTH)).show();
     }
-private void updateTime() {
+private void updateTime() {//to pick time
     new TimePickerDialog(this,t,datetime.get(Calendar.HOUR_OF_DAY),datetime.get(Calendar.MINUTE),true).show();
 
 }
@@ -53,7 +53,7 @@ datetime.set(Calendar.YEAR,year);
 
             datetime.set(Calendar.MONTH,month);
             datetime.set(Calendar.DAY_OF_MONTH,dayOfMonth);
-            updateTextLabel();
+            updateTextLabel();//updating info in text label
 
         }
     };
@@ -65,7 +65,7 @@ datetime.set(Calendar.YEAR,year);
             updateTextLabel();
         }
     };
-    private void updateTextLabel()
+    private void updateTextLabel()//updating label
     {
         text.setText(formatdatetime.format(datetime.getTime()));
     }
