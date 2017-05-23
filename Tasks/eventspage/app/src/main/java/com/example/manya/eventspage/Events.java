@@ -18,6 +18,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.*;
+<<<<<<< HEAD
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -34,6 +35,13 @@ private TextView t;
     final static ArrayList<String> arrayList = new ArrayList<String>();
     FirebaseDatabase database=FirebaseDatabase.getInstance();
     protected DatabaseReference myRef;
+=======
+public class Events extends AppCompatActivity {DateFormat formatdatetime=new SimpleDateFormat("dd MM yyyy, HH:mm");//custom format
+Calendar datetime=Calendar.getInstance();
+    private TextView text;
+private Button buttondate;
+    private Button buttontime;
+>>>>>>> origin/master
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,7 +49,11 @@ private TextView t;
         t = (TextView) findViewById(R.id.textView3);
         l = (ListView) findViewById(R.id.list_view);
 
+<<<<<<< HEAD
         myRef=database.getReference().child("events");
+=======
+        buttondate.setOnClickListener(new View.OnClickListener() {//for date updation
+>>>>>>> origin/master
 
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
@@ -52,12 +64,19 @@ private TextView t;
                 }
 
             }
+<<<<<<< HEAD
+=======
+        });
+        buttontime.setOnClickListener(new View.OnClickListener() {//for time updation
+
+>>>>>>> origin/master
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
                 throw databaseError.toException();
             }
         });
+<<<<<<< HEAD
 
         // Adapter: You need three parameters 'the context, id of the layout (it will be where the data is shown),
         // and the array that contains the data
@@ -83,10 +102,20 @@ if(in.hasExtra(Intent.EXTRA_TEXT))
 
     // next thing you have to do is check if your adapter has changed
     adapter.notifyDataSetChanged();
+=======
+        updateTextLabel();
+    }
+    private void updateDate(){//to pick date
+        new DatePickerDialog(this,d,datetime.get(Calendar.YEAR),datetime.get(Calendar.MONTH),datetime.get(Calendar.DAY_OF_MONTH)).show();
+    }
+private void updateTime() {//to pick time
+    new TimePickerDialog(this,t,datetime.get(Calendar.HOUR_OF_DAY),datetime.get(Calendar.MINUTE),true).show();
+>>>>>>> origin/master
 
 }
     }
 
+<<<<<<< HEAD
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -95,6 +124,11 @@ if(in.hasExtra(Intent.EXTRA_TEXT))
     }
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
+=======
+            datetime.set(Calendar.MONTH,month);
+            datetime.set(Calendar.DAY_OF_MONTH,dayOfMonth);
+            updateTextLabel();//updating info in text label
+>>>>>>> origin/master
 
         if (id == R.id.add_event) {
 Context context=Events.this;
@@ -103,8 +137,23 @@ Context context=Events.this;
             startActivity(str);
             return true;
         }
+<<<<<<< HEAD
 
         return super.onOptionsItemSelected(item);
+=======
+    };
+    TimePickerDialog.OnTimeSetListener t=new TimePickerDialog.OnTimeSetListener() {
+        @Override
+        public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+            datetime.set(Calendar.HOUR_OF_DAY,hourOfDay);
+            datetime.set(Calendar.MINUTE,minute);
+            updateTextLabel();
+        }
+    };
+    private void updateTextLabel()//updating label
+    {
+        text.setText(formatdatetime.format(datetime.getTime()));
+>>>>>>> origin/master
     }
 
 }
