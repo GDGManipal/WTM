@@ -50,6 +50,7 @@ Intent intent=new Intent(con,dc);
                 startActivity(intent);
             }
         });
+        
         buttondate.setOnClickListener(new View.OnClickListener() {
 
 
